@@ -32,21 +32,22 @@ class App extends Component {
     })
 
     return (
-      <div className="App">
-        <input className="search-box" type='search' placeholder='Search monsters' 
-        onChange={(event) => { 
-            const searchField = event.target.value.toLocaleLowerCase();
-            this.setState(()=> {return {searchField}})
-          }}/>
-        {
-          filteredMonsters.map((monster)=>{
-            return <div key={monster.id} ><h1>{ monster.name}</h1></div>
-          })
-        }
-        <div>
-          
-        </div>
-      </div>
+        <div className="App">
+          <input className="search-box" type='search' placeholder='Search monsters' 
+          onChange={(event) => { 
+              const searchField = event.target.value.toLocaleLowerCase();
+              this.setState(()=> {return {searchField}})
+            }}/>
+          {
+            filteredMonsters.map((monster)=>{
+              return <div key={monster.id} ><h1>{ monster.name}</h1></div>
+            })
+          }
+          <div>
+            
+          </div>
+          <p></p>
+        </div>     
     );
 
   }
